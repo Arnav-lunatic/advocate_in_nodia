@@ -14,6 +14,22 @@
 
 	<div class="controls">
 		<div class="links">
+
+			<li class="services-dropdown">
+				<a href="#">Services ▾</a>
+			  
+				<ul class="services-dropdown-menu">
+				  <li><a href="cyber-lawyers.html">Cyber Lawyers</a></li>
+				  <li><a href="criminal-lawyers.html">Criminal Lawyers</a></li>
+				  <li><a href="corporate-lawyers.html">Corporate, Trade & Industrial Disputes Lawyers</a></li>
+				  <li><a href="consumer-lawyers.html">Consumer Protection & Dispute Lawyers</a></li>
+				  <li><a href="civil-lawyers.html">Civil Lawyers</a></li>
+				  <li><a href="property-registration.html">Property Registration</a></li>
+				  <li><a href="notary-lawyer.html">Notary Lawyer</a></li>
+				  <li><a href="rera-lawyer.html">Lawyer for RERA</a></li>
+				</ul>
+			  </li>
+
 			<a class="link" href="/">Home</a>
 			<a class="link" href="/about">About</a>
 			<a class="link" href="https://www.sulekha.com/advocate-jasvir-singh-wailana-sikandrabad-contact-address">Testimonials</a>
@@ -321,6 +337,57 @@
 			font-size: 0.95rem;
 		}
 	}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  position: relative;
+}
+.services-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f3f3f3;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+}
+
+.services-dropdown-menu li {
+  border-bottom: 1px solid #ddd;
+}
+
+.services-dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.services-dropdown-menu a {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.services-dropdown-menu a:hover {
+  background: #e6e6e6;
+}
+
+.services-dropdown:hover .services-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 </style>
 
 <script is:inline>
