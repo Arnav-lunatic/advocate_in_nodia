@@ -1,0 +1,342 @@
+---
+---
+
+<section class="contact-section">
+	<div class="contact-container">
+		<div class="contact-header">
+			<h2>Get in Touch</h2>
+			<p>Have a legal matter? Reach out to us for expert consultation and representation.</p>
+		</div>
+
+		<div class="contact-content">
+			<!-- Contact Form -->
+			<form class="contact-form">
+				<div class="form-group">
+					<label for="fullname">Full Name *</label>
+					<input
+						type="text"
+						id="fullname"
+						name="fullname"
+						placeholder="Enter your full name"
+						required
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email Address *</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="your.email@example.com"
+						required
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="phone">Phone Number <span class="optional">(Optional)</span></label>
+					<input
+						type="tel"
+						id="phone"
+						name="phone"
+						placeholder="+91 (123) 456-7890"
+					/>
+				</div>
+
+				<div class="form-group full-width">
+					<label for="message">Message *</label>
+					<textarea
+						id="message"
+						name="message"
+						placeholder="Describe your legal matter in detail..."
+						rows="6"
+						required
+					></textarea>
+				</div>
+
+				<button type="submit" class="submit-btn">Send Message</button>
+			</form>
+
+			<!-- Contact Info -->
+			<div class="contact-info">
+				<div class="info-item">
+					<div class="info-icon">📍</div>
+					<div>
+						<h4>Office Location</h4>
+						<p>Noida & Greater Noida, Uttar Pradesh</p>
+					</div>
+				</div>
+
+				<div class="info-item">
+					<div class="info-icon">📞</div>
+					<div>
+						<h4>Phone</h4>
+						<p><a href="tel:+919876543210">+91 (123) 456-7890</a></p>
+					</div>
+				</div>
+
+				<div class="info-item">
+					<div class="info-icon">✉️</div>
+					<div>
+						<h4>Email</h4>
+						<p><a href="mailto:contact@advocatejasvir.com">contact@advocatejasvir.com</a></p>
+					</div>
+				</div>
+
+				<div class="info-item">
+					<div class="info-icon">⏰</div>
+					<div>
+						<h4>Available Hours</h4>
+						<p>Monday - Friday: 9 AM - 6 PM<br />Saturday: 10 AM - 4 PM</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.contact-section {
+		background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+		padding: 4rem 1rem;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contact-container {
+		max-width: 1100px;
+		width: 100%;
+	}
+
+	.contact-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.contact-header h2 {
+		font-size: 2.5rem;
+		font-weight: 900;
+		color: #0f172a;
+		margin: 0 0 1rem 0;
+		line-height: 1.2;
+	}
+
+	.contact-header p {
+		font-size: 1.1rem;
+		color: #475569;
+		margin: 0;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.contact-content {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		gap: 3rem;
+		margin-top: 2rem;
+	}
+
+	/* Form Styles */
+	.contact-form {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+	}
+
+	.form-group {
+		margin-bottom: 1.5rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form-group.full-width {
+		grid-column: 1 / -1;
+	}
+
+	.form-group label {
+		font-size: 0.95rem;
+		font-weight: 600;
+		color: #0f172a;
+		margin-bottom: 0.5rem;
+	}
+
+	.optional {
+		font-weight: 400;
+		color: #64748b;
+		font-size: 0.85rem;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		padding: 0.875rem 1rem;
+		border: 2px solid #e2e8f0;
+		border-radius: 8px;
+		font-family: inherit;
+		font-size: 1rem;
+		color: #0f172a;
+		transition: all 0.3s ease;
+		resize: vertical;
+	}
+
+	.form-group input:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #0ea5a4;
+		box-shadow: 0 0 0 3px rgba(14, 165, 164, 0.1);
+		background-color: #f8fffe;
+	}
+
+	.form-group input::placeholder,
+	.form-group textarea::placeholder {
+		color: #94a3b8;
+	}
+
+	.submit-btn {
+		width: 100%;
+		padding: 1rem 1.5rem;
+		background: #0ea5a4;
+		color: white;
+		font-size: 1rem;
+		font-weight: 700;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 12px rgba(14, 165, 164, 0.2);
+		margin-top: 1rem;
+	}
+
+	.submit-btn:hover {
+		background: #0d8e8d;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(14, 165, 164, 0.3);
+	}
+
+	.submit-btn:active {
+		transform: translateY(0);
+	}
+
+	/* Contact Info Styles */
+	.contact-info {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.info-item {
+		display: flex;
+		gap: 1rem;
+		padding: 1.5rem;
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+		transition: all 0.3s ease;
+	}
+
+	.info-item:hover {
+		box-shadow: 0 4px 20px rgba(14, 165, 164, 0.12);
+		transform: translateY(-2px);
+	}
+
+	.info-icon {
+		font-size: 1.8rem;
+		flex-shrink: 0;
+		width: 2.5rem;
+		height: 2.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #f0fffe;
+		border-radius: 8px;
+	}
+
+	.info-item h4 {
+		margin: 0 0 0.5rem 0;
+		font-size: 1rem;
+		font-weight: 700;
+		color: #0f172a;
+	}
+
+	.info-item p {
+		margin: 0;
+		color: #475569;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.info-item a {
+		color: #0ea5a4;
+		text-decoration: none;
+		font-weight: 600;
+		transition: color 0.3s ease;
+	}
+
+	.info-item a:hover {
+		color: #0d8e8d;
+		text-decoration: underline;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.contact-section {
+			padding: 2rem 1rem;
+		}
+
+		.contact-header h2 {
+			font-size: 1.8rem;
+		}
+
+		.contact-header p {
+			font-size: 1rem;
+		}
+
+		.contact-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.contact-form {
+			padding: 1.5rem;
+		}
+
+		.form-group {
+			margin-bottom: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.contact-section {
+			padding: 1.5rem 0.75rem;
+		}
+
+		.contact-header h2 {
+			font-size: 1.5rem;
+		}
+
+		.contact-header p {
+			font-size: 0.9rem;
+		}
+
+		.contact-form {
+			padding: 1rem;
+		}
+
+		.contact-info {
+			gap: 1rem;
+		}
+
+		.info-item {
+			padding: 1rem;
+		}
+
+		.submit-btn {
+			padding: 0.875rem 1rem;
+			font-size: 0.95rem;
+		}
+	}
+</style>
+
+<script type="module" src="/src/scripts/contact.js"></script>

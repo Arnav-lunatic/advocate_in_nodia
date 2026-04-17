@@ -1,3 +1,0 @@
-- change the social media icons and add links
-- add arrow icon in contact button in hero section
-- change the nav bar links, take reference from original website 
