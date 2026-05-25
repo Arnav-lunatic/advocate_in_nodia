@@ -1,0 +1,116 @@
+---
+// Floating Contact and WhatsApp buttons component
+---
+
+<div class="floating-buttons">
+	<!-- Contact Button -->
+	<a
+		href="tel:+919627829808"
+		class="floating-btn contact-btn"
+		title="Call us"
+		aria-label="Contact us by phone"
+	>
+		<img src="/src/assets/phone.png" alt="Call" width="48" height="48"/>
+	</a>
+
+	<!-- WhatsApp Button -->
+	<a
+		href="https://wa.me/919627829808?text=Hello%20Advocate%20In%20Noida"
+		class="floating-btn whatsapp-btn"
+		title="Message us on WhatsApp"
+		aria-label="Contact us on WhatsApp"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		<img src="/src/assets/whatsapp.png" alt="WhatsApp" width="48" height="48"/>
+	</a>
+</div>
+
+<style>
+	.floating-buttons {
+		position: fixed;
+		right: 20px;
+		bottom: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		z-index: 999;
+		animation: slideInUp 0.6s ease-out;
+	}
+
+	.floating-btn {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border: 3px solid rgba(0, 0, 0, 0.547);
+		transition: all 0.3s ease;
+		cursor: pointer;
+		color: white;
+		font-size: 24px;
+	}
+
+	.floating-btn:hover {
+		transform: scale(1.1);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+	}
+
+	.floating-btn:active {
+		transform: scale(0.95);
+	}
+
+	.contact-btn {
+		background: linear-gradient(135deg, #0ea5a4 0%, #0d9099 100%);
+	}
+
+	.contact-btn:hover {
+		background: linear-gradient(135deg, #0d9099 0%, #0ea5a4 100%);
+	}
+
+	.whatsapp-btn {
+		background: linear-gradient(135deg, #25d366 0%, #1db95f 100%);
+	}
+
+	.whatsapp-btn:hover {
+		background: linear-gradient(135deg, #1db95f 0%, #25d366 100%);
+	}
+
+	.floating-btn svg {
+		width: 28px;
+		height: 28px;
+	}
+
+	@keyframes slideInUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* Mobile responsiveness */
+	@media (max-width: 768px) {
+		.floating-buttons {
+			right: 15px;
+			bottom: 15px;
+			gap: 12px;
+		}
+
+		.floating-btn {
+			width: 50px;
+			height: 50px;
+		}
+
+		.floating-btn svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+</style>
