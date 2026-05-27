@@ -29,11 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
 					import.meta.env.PUBLIC_SERVICE_ID, // Replace with your EmailJS service ID
 					import.meta.env.PUBLIC_TEMPLATE_ID, // Replace with your EmailJS template ID
 					{
-						from_name: fullname,
-						from_email: email,
-						phone_number: phone,
+						name: fullname,
+						email: email,
+						phone: phone? phone : "N/A",
 						message: message,
-						to_email: "contact@advocatejasvir.com", // Replace with your email
 					},
 				)
 				.then(
