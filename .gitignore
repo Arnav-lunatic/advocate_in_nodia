@@ -1,24 +1,47 @@
-# build output
+# --- BUILD AND DIST DIRECTORIES ---
 dist/
-
-# generated types
+build/
 .astro/
 
-# dependencies
+# --- DEPENDENCY DIRECTORIES ---
 node_modules/
+.pnpm-store/
 
-# logs
+# --- CACHE AND TEMPORARY FILES ---
+.sass-cache/
+.eslintcache
+.parcel-cache
+.cache/
+.temp/
+.tmp/
+
+# --- ENVIRONMENT VARIABLES & SECRETS ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# --- LOGS AND DEBUG FILES ---
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
-.DS_Store
-
-# jetbrains setting folder
+# --- EDITOR & IDE SPECIFIC ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
