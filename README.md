@@ -28,7 +28,7 @@ This website is engineered for maximum performance, clean code modularity, and s
 ## 📂 Codebase Architecture
 
 ```filepath
-advocate_in_nodia/
+advocate_in_noida/
 ├── public/                  # Static assets served at the root URL
 │   ├── favicon.ico          # Browser tab shortcut icon
 │   ├── favicon.svg          # High-resolution vector icon
