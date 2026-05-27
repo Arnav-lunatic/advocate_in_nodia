@@ -1,6 +1,15 @@
 ---
 import "../styles/global.css";
 import FloatingContactButtons from "../components/FloatingContactButtons.astro";
+import faviconSvg from "../assets/favicon.svg";
+import faviconIco from "../assets/favicon.ico";
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = "Advocate Jasvir Singh | Lawyer in Noida", description = "Advocate Jasvir Singh is a practicing lawyer based in Noida, representing clients in civil, criminal, corporate, property, and cyber crime matters." } = Astro.props;
 ---
 
 <!doctype html>
@@ -8,10 +17,11 @@ import FloatingContactButtons from "../components/FloatingContactButtons.astro";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href={faviconSvg.src} />
+		<link rel="icon" href={faviconIco.src} />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
 	</head>
 	<body>
 		<slot />
