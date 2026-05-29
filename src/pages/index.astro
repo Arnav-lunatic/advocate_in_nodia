@@ -1,20 +1,152 @@
 ---
-import NavBar from '../components/NavBar.astro';
-import HeroSection from '../components/HeroSection.astro';
-import Layout from '../layouts/Layout.astro';
-import ServicesSection from '../components/ServicesSection.astro';
-import Footer from '../components/Footer.astro';
+import NavBar from "../components/NavBar.astro";
+import HeroSection from "../components/HeroSection.astro";
+import Layout from "../layouts/Layout.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import Footer from "../components/Footer.astro";
+import jasvir from "../assets/1000085000.png";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout 
-	title="Advocate Jasvir Singh | Leading Lawyer &amp; Legal Consultant in Noida"
+<Layout
+	title="Advocate Jasvir Singh | Leading Lawyer & Legal Consultant in Noida"
 	description="Need professional legal counsel in Noida? Advocate Jasvir Singh offers expert representation in criminal defense, civil law, corporate disputes, property registry, notary public, and UP-RERA disputes."
 >
 	<NavBar />
 	<HeroSection />
+
+	<section class="home-about-section">
+		<div class="home-about-container">
+			<div class="home-about-text">
+				<h2>
+					Trusted legal counsel with 18+ years of courtroom experience
+				</h2>
+				<p>
+					Advocate Jasvir Singh serves clients across Noida, Greater
+					Noida, Jewar, Bulandshahr and nearby districts in civil,
+					criminal, corporate, property, consumer, RERA, and notary
+					matters.
+				</p>
+				<p>
+					He combines strategic case preparation, clear legal
+					guidance, and a practical approach to protect your rights at
+					every stage.
+				</p>
+				<a href="/about" class="cta-button">View More</a>
+			</div>
+			<img
+				class="home-about-image"
+				src={jasvir.src}
+				alt="Advocate Jasvir Singh"
+			/>
+		</div>
+	</section>
+
 	<ServicesSection />
 	<Footer />
 </Layout>
+
+<style>
+	.home-about-section {
+		padding: 4rem 1rem;
+		background: #f9fbff;
+	}
+
+	.home-about-container {
+		max-width: 1200px;
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+		padding: 2.5rem 1rem;
+		background: white;
+		border-radius: 24px;
+		box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+	}
+
+	.home-about-image {
+		flex: 1;
+		margin-left: 2rem;
+		height: 450px;
+		width: 100%;
+		object-fit: cover;
+		border-radius: 16px;
+		box-shadow: 0 24px 80px rgba(15, 23, 42, 0.16);
+		animation: float-image 8s ease-in-out infinite;
+		transition: transform 280ms ease, box-shadow 280ms ease;
+	}
+
+	.home-about-image:hover {
+		transform: translateY(-8px) scale(1.02);
+		box-shadow: 0 32px 100px rgba(15, 23, 42, 0.22);
+	}
+
+	.home-about-text {
+		max-width: 760px;
+	}
+
+	.section-label {
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: #0ea5a4;
+		margin-bottom: 1rem;
+	}
+
+	.home-about-text h2 {
+		font-size: clamp(2rem, 2.5vw, 2.75rem);
+		margin: 0 0 1.25rem 0;
+		color: #0f172a;
+		line-height: 1.1;
+	}
+
+	.home-about-text p {
+		margin: 0 0 1rem 0;
+		color: #475569;
+		line-height: 1.8;
+		font-size: 1rem;
+	}
+
+	.cta-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.85rem 1.5rem;
+		margin-top: 1.5rem;
+		background: #0ea5a4;
+		color: #ffffff;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		text-decoration: none;
+		border-radius: 12px;
+		box-shadow: 0 12px 24px rgba(14, 165, 164, 0.16);
+	}
+
+	.cta-button:hover {
+		background: #0c8b84;
+		transform: translateY(-1px);
+		box-shadow: 0 16px 28px rgba(14, 165, 164, 0.22);
+	}
+
+	@media (max-width: 768px) {
+		.home-about-section {
+			padding: 3rem 1rem;
+		}
+
+		.home-about-image {
+			border-radius: 12px;
+			margin-left: 0;
+			margin-bottom: 1.5rem;
+			height: auto;
+			width: 100%;
+		}
+
+		.home-about-container {
+			padding: 2rem;
+			flex-direction: column-reverse;
+		}
+	}
+
+</style>

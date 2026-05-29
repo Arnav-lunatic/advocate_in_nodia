@@ -223,6 +223,8 @@ import Socials from "./Socials.astro";
 		right: 0;
 		top: 0;
 		height: 100vh;
+		scroll-behavior: smooth;
+		overflow-y: auto;
 		width: 280px;
 		max-width: 85vw;
 		background: var(--drawer-bg);
@@ -289,6 +291,8 @@ import Socials from "./Socials.astro";
 	}
 
 	.services-dropdown-menu-drawer {
+		display: flex;
+		flex-direction: column;
 		margin: 0.2rem 0 0 0.5rem;
 		padding: 0.2rem 0;
 		background: var(--drawer-bg);
